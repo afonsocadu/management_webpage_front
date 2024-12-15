@@ -1,0 +1,19 @@
+<form (ngSubmit)="onSubmit">
+
+    <mat-form-field class="project-field">
+        <mat-label>Project:</mat-label>
+        <input matInput type="text"  [(ngModel)]="boardData.title" name="userName">
+    </mat-form-field>
+
+        <mat-label>Select the technologies:</mat-label>
+        <div class="technologies-field">
+            <mat-checkbox *ngFor="let technology of technologiesCheckboxes" [checked]="technology.select" (change)="_changeTechnologiesCheckbox(technology)">
+                {{technology.name}}
+            </mat-checkbox>
+        </div>    
+
+    <div class="buttons">
+        <button mat-raised-button type="submit" class="light-blue-button" (click)="onSubmit()" [disabled]="_isSubmitDisabled">Submit</button>
+        <button mat-raised-button type="button" class="light-blue-button" (click)="onCancel()">Cancel</button>
+    </div>    
+</form>

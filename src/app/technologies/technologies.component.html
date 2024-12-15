@@ -1,0 +1,24 @@
+<br>
+<div class="mat-elevation-z8">
+    <div class="create-button-container">
+      <button mat-button type="button" class="light-blue-button create-button" (click)="_createTechnology()">Create</button>
+    </div>
+
+    <mat-table [dataSource]="_dataSource">
+      <ng-container matColumnDef="name">
+        <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+        <mat-cell *matCellDef="let technologyList"> {{ technologyList.name }} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="actions">
+        <mat-header-cell *matHeaderCellDef> Actions </mat-header-cell>
+        <mat-cell *matCellDef="let technologyList">
+          <button mat-button type="button" class="light-blue-button" (click)="_deleteTechnology(technologyList.id)">Delete</button>
+          <button mat-button type="button" class="light-blue-button" (click)="editTechnology(technologyList)">Update</button>
+        </mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="_displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: _displayedColumns;"></mat-row>
+    </mat-table>
+</div>

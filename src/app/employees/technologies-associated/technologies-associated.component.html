@@ -1,0 +1,8 @@
+<p>Technologies associated with the employee {{_employee}}</p>
+
+<ul class="technologies-associated">
+    <li *ngFor="let technology of _technologiesAssociated" class="technologies-item">{{ technology }}</li>
+</ul>
+  
+<button mat-raised-button type="button" class="light-blue-button" (click)="_closeModal()">Close</button>
+  

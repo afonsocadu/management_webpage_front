@@ -1,0 +1,37 @@
+<br>
+<div class="mat-elevation-z8">
+    <div class="create-button-container">
+      <button mat-button type="button" class="light-blue-button create-button" (click)="createEmployee()">Create</button>
+    </div>
+
+    <mat-table [dataSource]="dataSource">
+      <ng-container matColumnDef="userName">
+        <mat-header-cell *matHeaderCellDef> User Name </mat-header-cell>
+        <mat-cell *matCellDef="let employee"> {{ employee.user_name }} </mat-cell>
+      </ng-container>
+  
+      <ng-container matColumnDef="project">
+        <mat-header-cell *matHeaderCellDef> Project </mat-header-cell>
+        <mat-cell *matCellDef="let employee"> {{ employee.project }} </mat-cell>
+      </ng-container>
+    
+      <ng-container matColumnDef="actions">
+        <mat-header-cell *matHeaderCellDef> Actions </mat-header-cell>
+        <mat-cell *matCellDef="let employee">
+          <button mat-button type="button" class="light-blue-button" (click)="deleteEmployee(employee.id)">Delete</button>
+          <button mat-button type="button"class="light-blue-button" (click)="editEmployee(employee)"> Edit </button>
+        </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="technologies">
+        <mat-header-cell *matHeaderCellDef> Technologies </mat-header-cell>
+        <mat-cell *matCellDef="let employee">
+          <button mat-button type="button" class="light-blue-button" (click)="_openAssociatedTechnologiesModal(employee)">Technologies</button>
+        </mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+
+</div>

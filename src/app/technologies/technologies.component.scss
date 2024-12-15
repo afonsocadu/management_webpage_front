@@ -1,0 +1,77 @@
+.mat-elevation-z8 {
+    margin: 16px;
+}
+
+/* Button */
+button {
+    margin: 0 5px;
+}
+
+.create-button-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 16px;
+}
+
+.create-button {
+    margin-right: 32px;
+    margin-top: 8px;
+    width: 100px;
+    background-color: #3498db;
+    color: white;
+    border-radius: 4px;
+    padding: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.create-button:hover {
+    background-color: #2980b9;
+}
+
+::ng-deep .modal-container {
+    border: 2px solid #3498db;
+    padding: 16px;
+    border-radius: 8px;
+}
+
+.mat-table {
+    width: 100%;
+    margin-top: 16px;
+}
+
+.mat-header-cell, .mat-cell {
+    padding: 12px;
+    text-align: left;
+    font-size: 14px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.mat-header-cell {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.mat-cell {
+    background-color: white;
+}
+
+.mat-header-row, .mat-row {
+    display: flex;
+}
+
+.mat-header-cell, .mat-cell {
+    flex: 1;
+}
+
+.light-blue-button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.light-blue-button:hover {
+    background-color: #2980b9;
+}

@@ -1,0 +1,39 @@
+<br>
+<div class="mat-elevation-z8">
+    <div class="create-button-container">
+      <button mat-button type="button" class="light-blue-button create-button" (click)="_createProject()">Create</button>
+    </div>
+
+    <mat-table [dataSource]="dataSource">
+      <ng-container matColumnDef="title">
+        <mat-header-cell *matHeaderCellDef> Projects </mat-header-cell>
+        <mat-cell *matCellDef="let projectList">
+          <button mat-button type="button" class="light-blue-button" (click)="_openProjectTitle(projectList)">{{ projectList.title }}</button>
+        </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="employees">
+        <mat-header-cell *matHeaderCellDef> Employees </mat-header-cell>
+        <mat-cell *matCellDef="let projectList">
+          <button mat-button type="button" class="light-blue-button" (click)="_openProjectEmployees(projectList)">Employees</button>
+        </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="technologies">
+        <mat-header-cell *matHeaderCellDef> Technologies </mat-header-cell>
+        <mat-cell *matCellDef="let projectList">
+          <button mat-button type="button" class="light-blue-button" (click)="_openProjectTechnologies(projectList)">Technologies</button>
+        </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="delete">
+        <mat-header-cell *matHeaderCellDef> Delete </mat-header-cell>
+        <mat-cell *matCellDef="let projectList">
+          <button mat-button type="button" class="light-blue-button" (click)="_deleteProject(projectList.id)">Delete</button>
+        </mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+</div>

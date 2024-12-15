@@ -1,0 +1,19 @@
+<form (ngSubmit)="onSubmit">
+
+    <mat-form-field class="employee-field">
+        <mat-label>User Name:</mat-label>
+        <input matInput type="text"  [(ngModel)]="userName" name="userName" required>
+    </mat-form-field>
+
+        <mat-label>Select the technologies:</mat-label>
+        <div class="technologies-field">
+            <mat-checkbox *ngFor="let technology of checkboxes" [checked]="technology.select" (change)="_changeCheckbox(technology)">
+                {{technology.name}}
+            </mat-checkbox>
+        </div>
+
+    <div class="buttons">
+        <button mat-raised-button type="submit" class="light-blue-button" (click)="onSubmit()">Submit</button>
+        <button mat-raised-button type="button" class="light-blue-button" (click)="onCancel()">Cancel</button>
+    </div>
+</form>

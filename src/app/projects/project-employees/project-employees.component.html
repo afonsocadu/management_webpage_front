@@ -1,0 +1,14 @@
+<form (ngSubmit)="onSubmit">
+
+    <p id="employee-information">Select employees to associate with the project:</p>
+        <div class="employees-field">
+            <mat-checkbox *ngFor="let employee of employeesCheckboxes" [checked]="employee.select" (change)="_changeEmployeesCheckbox(employee)">
+                {{ employee.name }}
+            </mat-checkbox>
+        </div>
+
+    <div class="buttons">
+        <button mat-raised-button type="submit" class="light-blue-button" (click)="onSubmit()">Submit</button>
+        <button mat-raised-button type="button" class="light-blue-button" (click)="onCancel()">Cancel</button>
+    </div>    
+</form>
