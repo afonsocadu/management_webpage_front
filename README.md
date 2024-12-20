@@ -15,6 +15,6 @@ Frontend:
 ![image](https://github.com/user-attachments/assets/7fab43f9-d56c-4807-bdd0-42aeaf42d98e)
 ![image](https://github.com/user-attachments/assets/1685ac29-66a0-483b-bf11-51875c788911)
 
-Repository: The backend is in a separate repository 👉 [Backendtend Repository - management_webpage_front]([https://github.com/afonsocadu/management_webpage_front](https://github.com/afonsocadu/management_webpage_backend))
+Repository: The backend is in a separate repository 👉 [Backendtend Repository - management_webpage_backend) https://github.com/afonsocadu/management_webpage_backend))
 Framework/Library Ruby on rails
 
